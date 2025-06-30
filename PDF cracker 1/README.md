@@ -55,3 +55,11 @@ If the password is found, it will be displayed in the terminal.
 If the password is not found, the script will notify you.
 
 If required arguments are missing or the PDF is unreadable, the tool will handle and report the error.
+
+⚠️ Disclaimer
+This tool is developed for educational and ethical purposes only.
+Do not use it to target domains you do not own or do not have permission to test.
+
+The developer is not responsible for any misuse or illegal activity done using this tool.
+
+🛡️ Learn. Practice. Respect cyber laws.
