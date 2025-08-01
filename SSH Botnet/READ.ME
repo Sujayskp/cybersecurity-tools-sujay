@@ -1,0 +1,104 @@
+# 🔒 SSH Botnet Using Python
+
+This project simulates an SSH-based botnet controller using Python. It is developed as part of my cybersecurity internship with **Inlighn Tech**. The purpose is to understand how attackers control multiple machines using SSH, execute remote commands, and perform simulated DDoS attacks for educational and ethical hacking purposes.
+
+---
+
+## 🚀 Features
+
+- Connect to SSH-enabled devices (bots)
+- Execute commands remotely on all bots
+- Interactive bash shell session
+- Add new bots dynamically
+- Save and load botnet using JSON
+- Simulated SYN flood DDoS attack using Scapy
+
+---
+
+## 📂 Files
+
+| File | Description |
+|------|-------------|
+| `ssh_botnet.py` | Main script for botnet control |
+| `botnet.json` | Stores connected bot credentials |
+| `README.md` | Project explanation and usage guide |
+
+---
+
+## ⚙️ Requirements
+
+- Python 3.x
+- [Paramiko](https://pypi.org/project/paramiko/)
+- [Scapy](https://pypi.org/project/scapy/)
+- [Colorama](https://pypi.org/project/colorama/)
+
+### ✅ Install packages:
+
+```bash
+pip install paramiko scapy colorama
+🧪 Usage
+Make sure the SSH server is enabled on your system.
+
+Update botnet.json with SSH credentials:
+
+json
+Copy
+Edit
+[
+  {
+    "host": "127.0.0.1",
+    "user": "your_username",
+    "password": "your_password",
+    "port": 22
+  }
+]
+Run the script:
+
+bash
+Copy
+Edit
+python ssh_botnet.py
+Use the menu to:
+
+Add bots
+
+List connected bots
+
+Run commands
+
+Open interactive shell
+
+Save and load botnet
+
+Simulate a DDoS attack (test-only)
+
+⚠️ Disclaimer
+This project is for educational purposes only.
+Do not use this script against any device or network without full permission.
+Unauthorized access is illegal and unethical.
+
+📚 Credits
+Developed by Sujay Ps as part of the Inlighn Tech Cybersecurity Internship – 2025.
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you'd like me to help you:
+
+- Push this to GitHub
+- Add screenshots or a video demo section
+- Write a short LinkedIn post with this project
+
+You're doing everything right! 💻🔥
+
+
+
+
+
+
+
+
+Ask ChatGPT
