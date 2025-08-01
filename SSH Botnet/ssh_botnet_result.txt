@@ -1,0 +1,129 @@
+PS D:\Cyber security\Inligh tech\SSH Botnet Project> python ssh_botnet.py
+>> 
+
+====== SSH Botnet Menu ======
+1. List Bots
+2. Run Command on All Bots
+3. Interactive Bash Shell
+4. Add Bot
+5. DDoS Attack
+6. Save Botnet
+7. Exit
+Choice: 4
+Host: 127.0.0.1
+Username: cyberbot
+Password: cyber123
+Port (default 22): 22
+[+] Connected to 127.0.0.1
+
+====== SSH Botnet Menu ======
+1. List Bots
+2. Run Command on All Bots
+3. Interactive Bash Shell
+4. Add Bot
+5. DDoS Attack
+6. Save Botnet
+7. Exit
+Choice: 1
+1. 127.0.0.1
+
+====== SSH Botnet Menu ======
+1. List Bots
+2. Run Command on All Bots
+3. Interactive Bash Shell
+4. Add Bot
+5. DDoS Attack
+6. Save Botnet
+7. Exit
+Choice: 2
+Enter command to run: whoami
+[127.0.0.1] >> laptop-6vrms633\cyberbot
+
+
+====== SSH Botnet Menu ======
+1. List Bots
+2. Run Command on All Bots
+3. Interactive Bash Shell
+4. Add Bot
+5. DDoS Attack
+6. Save Botnet
+7. Exit
+Choice: 3
+Bash$ ipconfig
+[127.0.0.1] >> 
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet 3:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 2409:40f3:a:e431:3ff:7709:a093:a776
+   Temporary IPv6 Address. . . . . . : 2409:40f3:a:e431:89a0:af1b:5d5c:6abf
+   Link-local IPv6 Address . . . . . : fe80::a421:99f5:c6d1:5ee4%15
+   IPv4 Address. . . . . . . . . . . : 192.168.41.125
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::e8b7:14ff:fe7b:21f8%15
+                                       192.168.41.206
+
+Wireless LAN adapter Wi-Fi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Bash$ dir
+[127.0.0.1] >>  Volume in drive C is OS
+ Volume Serial Number is 2C04-50B4
+
+ Directory of C:\Users\cyberbot
+
+06/22/2025  08:02 PM    <DIR>          .
+06/22/2025  08:02 PM    <DIR>          ..
+12/07/2019  02:44 PM    <DIR>          Desktop
+06/22/2025  08:02 PM    <DIR>          Documents
+12/07/2019  02:44 PM    <DIR>          Downloads
+12/07/2019  02:44 PM    <DIR>          Favorites
+12/07/2019  02:44 PM    <DIR>          Links
+12/07/2019  02:44 PM    <DIR>          Music
+06/21/2024  01:01 PM    <DIR>          OneDrive
+12/07/2019  02:44 PM    <DIR>          Pictures
+12/07/2019  02:44 PM    <DIR>          Saved Games
+12/07/2019  02:44 PM    <DIR>          Videos
+               0 File(s)              0 bytes
+              12 Dir(s)  33,365,987,328 bytes free
+
+Bash$ exit
+
+====== SSH Botnet Menu ======
+1. List Bots
+2. Run Command on All Bots
+3. Interactive Bash Shell
+4. Add Bot
+5. DDoS Attack
+6. Save Botnet
+7. Exit
+Choice: 6
+
+====== SSH Botnet Menu ======
+1. List Bots
+2. Run Command on All Bots
+3. Interactive Bash Shell
+4. Add Bot
+5. DDoS Attack
+6. Save Botnet
+7. Exit
+Choice:
