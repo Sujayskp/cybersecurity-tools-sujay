@@ -1,0 +1,117 @@
+# Advanced FTP Brute-Force Tool  
+**Author:** Sujay  
+**Disclaimer:** This project is created strictly for **educational purposes only**.  
+Do not use it on systems without explicit permission. The author is **not responsible** for any misuse.
+
+---
+
+## 📌 Overview  
+This tool demonstrates **FTP brute-force techniques** using Python.  
+It comes in two versions:
+- **`ftp_brute.py`** → A simple, single-user brute-forcer.  
+- **`advanced_ftp_brute.py`** → A more flexible, multi-user, and customizable version with threading, password generation, and retry mechanisms.
+
+Both scripts currently run in **simulation mode** for safe testing and learning.  
+You can switch to **real mode** to test against an FTP server you own or have permission to use.
+
+---
+
+## ⚙️ Features  
+- Multi-threaded brute-forcing for faster execution.  
+- Support for:
+  - Single username or multiple from a file.
+  - Password wordlists or dynamic password generation.
+- Configurable number of threads.  
+- Retry mechanism for temporary connection errors.  
+- Color-coded console output for clarity.  
+- Saves found credentials to a file.  
+
+---
+
+## 📂 Project Structure  
+.
+├── ftp_brute.py # Basic version (single user, simple brute-force)
+├── advanced_ftp_brute.py # Advanced multi-user brute-force tool
+├── wordlist.txt # Example password list
+├── userlist.txt # Example username list
+├── advanced_ftp_brute_result.png # Example output screenshot
+
+yaml
+Copy
+Edit
+
+---
+
+## 🖥️ How It Works  
+### **Basic Version (`ftp_brute.py`)**
+1. Reads a list of passwords from `wordlist.txt`.  
+2. Tries each password against a single username.  
+3. Stops when valid credentials are found.  
+
+### **Advanced Version (`advanced_ftp_brute.py`)**
+1. Reads usernames from a file or accepts a single username via CLI.  
+2. Reads passwords from a file or generates them dynamically.  
+3. Uses multiple threads to test combinations in parallel.  
+4. Handles retries for temporary failures.  
+5. Saves found credentials to `found_credentials.txt`.
+
+---
+
+## 🚀 Setup & Usage  
+
+### 1️⃣ **Install Requirements**
+```bash
+pip install colorama
+2️⃣ Edit Connection Details
+In the script, set your FTP server’s IP/hostname:
+
+python
+Copy
+Edit
+IP = "127.0.0.1"
+PORT = 21
+3️⃣ Run the Basic Version
+bash
+Copy
+Edit
+python ftp_brute.py
+4️⃣ Run the Advanced Version
+bash
+Copy
+Edit
+python advanced_ftp_brute.py -H 127.0.0.1 -U userlist.txt -W wordlist.txt -t 10
+Options:
+
+sql
+Copy
+Edit
+-H, --host       Target FTP host (required)
+-P, --port       Target FTP port (default: 21)
+-U, --userlist   Path to file containing usernames
+-u, --username   Single username to test
+-W, --wordlist   Path to file containing passwords
+-t, --threads    Number of threads (default: 10)
+-C, --chars      Characters for password generation
+-l, --min-len    Minimum password length for generation
+-L, --max-len    Maximum password length for generation
+--save-file      File to save found credentials (default: found_credentials.txt)
+📸 Example Output (Simulation Mode)
+
+⚠️ Legal Disclaimer
+This code is intended for learning and educational purposes only.
+Do not use it on any system without explicit written permission.
+Unauthorized use is illegal and can result in severe penalties.
+Always test in a controlled environment.
+
+📚 Learning Concepts Covered
+Python ftplib usage for FTP connections.
+
+Threading for faster brute-force execution.
+
+Using queues for task management in concurrent programs.
+
+Password list processing and generation.
+
+Error handling and retry mechanisms.
+
+Created by: Sujay 
