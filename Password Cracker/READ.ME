@@ -1,0 +1,74 @@
+🔓 Python Password Cracker
+A multi-threaded password cracker built in Python by Sujay, supporting dictionary and brute-force attacks for MD5, SHA1, and SHA256 hashes.
+⚠ For educational purposes only — do not use against systems or data you don’t own.
+
+📌 Features
+Supports multiple hash algorithms — MD5, SHA1, SHA256.
+
+Two cracking modes:
+
+Dictionary attack using a wordlist.
+
+Brute-force attack with customizable length and character sets.
+
+Multi-threaded processing for speed.
+
+Progress bar with attempts per second using tqdm.
+
+Error handling for invalid inputs or missing wordlists.
+
+🛠 Requirements
+Python 3.7+
+
+Install required Python library:
+
+bash
+Copy
+Edit
+pip install tqdm
+🚀 Usage
+1️⃣ Dictionary Attack
+bash
+Copy
+Edit
+python password_cracker.py <HASH> -t <HASH_TYPE> -w <WORDLIST_PATH>
+Example:
+
+bash
+Copy
+Edit
+python password_cracker.py 098f6bcd4621d373cade4e832627b4f6 -t md5 -w wordlist.txt
+2️⃣ Brute-Force Attack
+bash
+Copy
+Edit
+python password_cracker.py <HASH> -t <HASH_TYPE> --min_length <MIN> --max_length <MAX> --chars <CHARSET>
+Example:
+
+bash
+Copy
+Edit
+python password_cracker.py 098f6bcd4621d373cade4e832627b4f6 -t md5 --min_length 1 --max_length 4 --chars abc123
+📷 Example Output
+yaml
+Copy
+Edit
+Attempting dictionary attack using wordlist: wordlist.txt
+Cracking: 40%
+
+Password cracked: test
+⚙ How It Works
+Hash Validation — Confirms the selected hash type is supported.
+
+Attack Type Selection — Uses a wordlist (dictionary) or generates password combinations (brute-force).
+
+Multi-threaded Matching — Uses ThreadPoolExecutor to speed up attempts.
+
+Progress Tracking — Displays real-time cracking status.
+
+Result Output — Shows the cracked password or a failure message.
+
+⚖ Legal Disclaimer
+This tool is intended only for ethical hacking training and security research.
+Unauthorized password cracking is illegal.
+Only use on hashes you own or have explicit permission to test.
