@@ -1,0 +1,63 @@
+# Information Stealer Using Python
+
+## 📌 Overview
+This is an **educational project** developed as part of my Inlighn Tech Internship.  
+It demonstrates how sensitive data can be extracted from a Windows system, such as:
+- Saved browser passwords
+- Clipboard content
+- System & network information
+
+⚠ **For educational purposes only** – Do not use this tool on any system without explicit permission.  
+The goal is to understand vulnerabilities and how to protect against them.
+
+---
+
+## 🎯 Features
+- **Chrome Password Extraction** – Retrieves and decrypts saved Google Chrome credentials.
+- **Clipboard Capture** – Reads and displays the latest copied text.
+- **System Information Gathering** – Collects OS details, IP addresses, MAC address, and hostname.
+
+---
+
+## 🛠 Technologies & Libraries
+- **Python 3**
+- `os`, `shutil`, `json`, `base64` – File handling and parsing
+- `win32crypt` – Windows DPAPI decryption
+- `sqlite3` – Accessing Chrome’s Login Data database
+- `pycryptodome` – AES-GCM decryption
+- `pyperclip` – Clipboard access
+- `platform`, `socket`, `uuid`, `re` – System & network details
+- `requests` – Public IP fetching
+
+---
+
+## 🚀 How to Run
+1. **Install dependencies**:
+   ```bash
+   pip install pywin32 pycryptodome pyperclip requests
+Run the script:
+
+bash
+Copy
+Edit
+python info_stealer.py
+💡 Run this only on a Windows system with Chrome installed and saved passwords for testing.
+
+📚 Learning Outcomes
+By doing this project, I learned:
+
+How browsers store and encrypt saved credentials.
+
+How to use Windows DPAPI and AES-GCM decryption in Python.
+
+How to access and read SQLite databases.
+
+How to capture clipboard data programmatically.
+
+How to gather system and network information for security testing.
+
+The importance of ethical hacking practices and legal boundaries.
+
+👤 Author
+Sujay
+Intern at Inlighn Tech
