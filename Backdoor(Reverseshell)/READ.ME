@@ -1,0 +1,98 @@
+# Python Remote Command Execution Tool  
+**Author:** Sujay  
+**Disclaimer:** This project is created strictly for **educational purposes only**.  
+Do not use it on systems without proper authorization. The author is **not responsible** for any misuse.
+
+---
+
+## 📌 Overview  
+This is a simple **client-server** application built in Python that allows remote command execution, file upload, and download between a server and a connected client.  
+It is designed for **learning network programming, sockets, and JSON-based communication** in Python.
+
+---
+
+## ⚙️ Features  
+- **Reliable Send & Receive:** Uses JSON for consistent data transfer.  
+- **Remote Command Execution:** Server can send shell commands to the client.  
+- **File Upload:** Server can send files to the client.  
+- **File Download:** Server can request files from the client.  
+- **Change Directory:** Client can change working directories upon server request.  
+- **Error Handling:** Graceful handling of unexpected errors and disconnections.  
+
+---
+
+## 📂 Project Structure  
+.
+├── server.py # Server script – waits for client connection and sends commands
+├── client.py # Client script – connects to server and executes received commands
+
+yaml
+Copy
+Edit
+
+---
+
+## 🖥️ How It Works  
+### 1. **Server (`server.py`)**
+- Starts listening on a specified IP and port.
+- Accepts a connection from the client.
+- Allows interactive shell commands.
+- Supports `upload <file>` and `download <file>` commands.
+- Can send an `exit` command to close the session.
+
+### 2. **Client (`client.py`)**
+- Continuously attempts to connect to the server.
+- Receives commands and executes them.
+- Handles file uploads/downloads using Base64 encoding.
+- Sends execution results back to the server.
+
+---
+
+## 🚀 Setup & Usage  
+### 1️⃣ **Edit IP and Port**
+In both `server.py` and `client.py`, update the following line with your **server's IP address**:
+```python
+IP = "192.168.xxx.xxx"
+PORT = 4444
+2️⃣ Run the Server
+bash
+Copy
+Edit
+python3 server.py
+3️⃣ Run the Client
+bash
+Copy
+Edit
+python3 client.py
+Ensure the client runs on a machine that can connect to the server's IP and port.
+
+📜 Example Commands (Server Side)
+dir (Windows) / ls (Linux/Mac) → List files in current directory.
+
+cd <path> → Change directory on client machine.
+
+upload <local_file_path> → Send file to client.
+
+download <remote_file> → Fetch file from client.
+
+exit → Close the session.
+
+⚠️ Legal Disclaimer
+This code is intended for learning purposes to understand Python networking concepts.
+Any use of this tool for unauthorized access, control, or intrusion is illegal and may result in severe consequences.
+Use only in controlled environments with explicit permission.
+
+📚 Learning Concepts Covered
+Python socket programming
+
+JSON data serialization/deserialization
+
+Base64 encoding/decoding for binary data
+
+Client-server architecture
+
+Remote command execution
+
+Error handling in network applications
+
+Created by: Sujay 
