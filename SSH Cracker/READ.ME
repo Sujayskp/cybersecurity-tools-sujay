@@ -1,0 +1,122 @@
+# Advanced SSH Brute-Force Tool  
+**Author:** Sujay  
+**Disclaimer:** This project is created strictly for **educational purposes only**.  
+Do not use it on systems without explicit permission. The author is **not responsible** for any misuse.
+
+---
+
+## 📌 Overview  
+This project demonstrates **SSH brute-force attack techniques** using Python and the `paramiko` library.  
+It includes:
+- **`ssh_brute.py`** → A basic SSH brute-forcer for single usernames.  
+- **`advance_ssh_brute.py`** → A more advanced, multi-threaded SSH brute-forcer with password generation and better error handling.  
+- **`ssh_test.py`** → A simple SSH login tester to verify credentials and connectivity.
+
+Both brute-forcers are intended for **cybersecurity learning** and should only be used in **controlled, authorized environments**.
+
+---
+
+## ⚙️ Features  
+- **Basic Version (`ssh_brute.py`)**
+  - Tests passwords from a wordlist against a single username.
+  - Stops when valid credentials are found.
+  - Saves successful credentials to `credentials.txt`.
+
+- **Advanced Version (`advance_ssh_brute.py`)**
+  - Multi-threaded for faster brute-forcing.
+  - Supports:
+    - Wordlist-based password testing.
+    - Dynamic password generation from a custom character set.
+  - Thread-safe logging and result saving.
+  - Timeout and error handling for unreliable connections.
+  - Saves results to `credentials.txt`.
+
+---
+
+## 📂 Project Structure  
+.
+├── ssh_brute.py # Basic SSH brute-forcer
+├── advance_ssh_brute.py # Advanced SSH brute-forcer with threading & password generation
+├── ssh_test.py # SSH connection tester
+├── credentials.txt # File storing found credentials (created at runtime)
+├── passlist.txt # Example password list
+├── advance_ssh_brute_result.png # Example output screenshot
+
+yaml
+Copy
+Edit
+
+---
+
+## 🖥️ How It Works  
+
+### **Basic SSH Brute-Forcer**
+1. Reads passwords from `passlist.txt`.
+2. Attempts SSH login for each password with a single username.
+3. Stops when valid credentials are found.
+
+### **Advanced SSH Brute-Forcer**
+1. Reads passwords from a file **or** generates them dynamically.
+2. Uses multiple threads to test passwords concurrently.
+3. Stops all threads once valid credentials are found.
+4. Saves results in `credentials.txt`.
+
+---
+
+## 🚀 Setup & Usage  
+
+### 1️⃣ **Install Dependencies**
+```bash
+pip install paramiko colorama
+2️⃣ Run Basic Version
+bash
+Copy
+Edit
+python ssh_brute.py <host> -u <username> -p passlist.txt
+Example:
+
+bash
+Copy
+Edit
+python ssh_brute.py 127.0.0.1 -u testuser -p passlist.txt
+3️⃣ Run Advanced Version
+bash
+Copy
+Edit
+python advance_ssh_brute.py <host> -u <username> -p passlist.txt -t 5
+Example with password generation:
+
+bash
+Copy
+Edit
+python advance_ssh_brute.py 127.0.0.1 -u testuser -g a-z0-9 4 6 -t 10
+Options:
+
+sql
+Copy
+Edit
+host                  Target hostname or IP address
+-u, --username        Single username to test (required)
+-t, --threads         Number of threads (default: 5)
+-p, --passlist        Path to password list file
+-g, --generate        Generate passwords: CHARS MIN_LEN MAX_LEN
+📸 Example Output (Advanced Version)
+
+⚠️ Legal Disclaimer
+This tool is for educational and ethical penetration testing only.
+Do not use it on systems without explicit written permission.
+Unauthorized use is illegal and punishable by law.
+Always test in a controlled environment.
+
+📚 Learning Concepts Covered
+SSH authentication handling with paramiko.
+
+Multi-threading and queue management in Python.
+
+Password list reading and dynamic password generation.
+
+Exception handling for network and authentication errors.
+
+Ethical hacking methodology for penetration testing.
+
+Created by: Sujay
