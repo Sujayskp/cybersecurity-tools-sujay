@@ -1,0 +1,65 @@
+Python Port Scanner
+A multi-threaded port scanner built in Python by Sujay, designed to scan a target IP or hostname for open ports, identify running services, and retrieve banner information.
+⚠ For educational purposes only — do not use without proper authorization.
+
+📌 Features
+Multi-threaded scanning using ThreadPoolExecutor for speed.
+
+Service detection via socket.getservbyport.
+
+Banner grabbing to gather additional info from open ports.
+
+Color-coded CLI output for better readability.
+
+Progress tracking while scanning.
+
+🛠 Requirements
+Python 3.7+
+
+No external libraries needed — only uses Python standard library (socket, concurrent.futures, sys, time).
+
+🚀 How to Use
+Clone the repository
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/port-scanner.git
+cd port-scanner
+Run the script
+
+bash
+Copy
+Edit
+python port_scanner.py
+Follow prompts
+
+Enter the target IP or hostname.
+
+Enter the start port and end port range.
+
+View results — Open ports with service names and banners will be displayed.
+
+📷 Example Output
+pgsql
+Copy
+Edit
+--- Python Port Scanner by Sujay ---
+Enter target IP address or hostname (e.g., 127.0.0.1 or scanme.nmap.org): scanme.nmap.org
+Enter start port (e.g., 1): 20
+Enter end port (e.g., 100):
+
+Starting scan on target: scanme.nmap.org (Ports: 20-100)
+Resolved IP: 45.33.32.156
+Progress: 81/81 ports scanned (100) 
+
+--- Port Scan Results ---
+Port     Status          Service              Banner
+22       Open            ssh                  OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+80       Open            http                 Apache httpd 2.4.29
+--- Scan Complete ---
+⚖ Legal Disclaimer
+This project is created strictly for educational and research purposes.
+Scanning networks without permission is illegal and may result in criminal charges.
+Only scan systems you own or have explicit permission to test.
+
